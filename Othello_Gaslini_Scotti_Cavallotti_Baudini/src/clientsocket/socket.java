@@ -65,8 +65,8 @@ public class socket extends Thread{
                             turno=black;
                         }
                     }
-                   // do{
-                        /*String incorso = null;
+                    /*do{
+                        String incorso = null;
                         while(!("round: <"+turno+">;").equals(incorso)){
                             incorso=in.readLine();
                         }
@@ -92,6 +92,9 @@ public class socket extends Thread{
                         v = new view(b.CampoDiGioco, b.Mosse);
                         G = new GraficaOthello(b,turno);
                         v.Stampa();
+                        //
+                        //
+                        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
                         frame.jLabel3.setText(Ctrl.Conteggio(white));
                         frame.jLabel4.setText(Ctrl.Conteggio(black));
                         frame.invalidate();
@@ -101,7 +104,7 @@ public class socket extends Thread{
                     //}while(Ctrl.FineGioco()==true);
                     out.println("endgame");
                     //in.close();
-		}catch(IOException e) { 
+		}catch(Exception e) { 
 			System.out.println(e.getMessage());
 		}     
     }

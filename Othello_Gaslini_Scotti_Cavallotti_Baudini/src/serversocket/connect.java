@@ -45,13 +45,12 @@ public class connect extends Thread{
                     out1.println("start: " + "default " + socket.a);
                     Thread.sleep(2000);
                     while(true){
-                        msg=in1.readLine();
+                        msg=in2.readLine();
                         if(msg.toLowerCase().contains("place: ".toLowerCase())){
-                            System.out.println("Ho letto place");
-                            System.out.println(msg.charAt(8));
-                            System.out.println(msg.charAt(13));
-                            //out.println("");
-                        }
+                                System.out.println("Ho letto place");
+                                System.out.println(msg.charAt(8));
+                                System.out.println(msg.charAt(13));
+                            }
                     }
                 }
             }catch(Exception e1){
@@ -66,13 +65,13 @@ public class connect extends Thread{
                         System.out.println("è stato letto connection;");
                         out2.println("start: " + "default " + socket.a);
                         while(true){
-                        msg=in1.readLine();
-                        if(msg.toLowerCase().contains("place: ".toLowerCase())){
-                            System.out.println("Ho letto place");
-                            System.out.println(msg.charAt(8));
-                            System.out.println(msg.charAt(13));
-                            //out.println("");
-                        }
+                            msg=in2.readLine();
+                            if(msg.toLowerCase().contains("place: ".toLowerCase())){
+
+                                    System.out.println("Ho letto place");
+                                    System.out.println(msg.charAt(8));
+                                    System.out.println(msg.charAt(13));
+                                }
                     }
                     }
                 }catch(Exception e1){
@@ -116,8 +115,5 @@ public class connect extends Thread{
         } catch (IOException ex) {
             Logger.getLogger(connect.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    public void Update(){
-        
     }
 }
