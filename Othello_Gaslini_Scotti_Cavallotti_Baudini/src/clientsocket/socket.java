@@ -101,7 +101,7 @@ public class socket extends Thread{
                     //}while(Ctrl.FineGioco()==true);
                     out.println("endgame");
                     //in.close();
-		}catch(Exception e) { 
+		}catch(IOException e) { 
 			System.out.println(e.getMessage());
 		}     
     }
