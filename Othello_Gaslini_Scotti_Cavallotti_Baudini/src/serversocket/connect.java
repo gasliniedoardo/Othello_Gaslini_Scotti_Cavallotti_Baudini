@@ -35,6 +35,7 @@ public class connect extends Thread{
     @Override
     public void run(){
         String a;
+        String msg=null;
         if (socket.a.equalsIgnoreCase("nero")) {    //entra nel nero
             try{
                 in1 = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -43,7 +44,15 @@ public class connect extends Thread{
                     System.out.println("E' stato letto connection;");
                     out1.println("start: " + "default " + socket.a);
                     Thread.sleep(2000);
-                    //Gioco();
+                    while(true){
+                        msg=in1.readLine();
+                        if(msg.toLowerCase().contains("place: ".toLowerCase())){
+                            System.out.println("Ho letto place");
+                            System.out.println(msg.charAt(8));
+                            System.out.println(msg.charAt(13));
+                            //out.println("");
+                        }
+                    }
                 }
             }catch(Exception e1){
                 System.out.println(e1.getMessage());
@@ -56,7 +65,15 @@ public class connect extends Thread{
                     if (in2.readLine().equalsIgnoreCase("connection;")) {
                         System.out.println("è stato letto connection;");
                         out2.println("start: " + "default " + socket.a);
-                        //Gioco();
+                        while(true){
+                        msg=in1.readLine();
+                        if(msg.toLowerCase().contains("place: ".toLowerCase())){
+                            System.out.println("Ho letto place");
+                            System.out.println(msg.charAt(8));
+                            System.out.println(msg.charAt(13));
+                            //out.println("");
+                        }
+                    }
                     }
                 }catch(Exception e1){
                     System.out.println(e1.getMessage());
@@ -70,24 +87,37 @@ public class connect extends Thread{
             out3 = new PrintStream(client.getOutputStream(), true);
             String msg=null;
             out3.println("round: <black>;");
-                while(!("end: ").equals(in3.readLine())){
-                    out3.println("round: <black>;");
-                    if(msg.toLowerCase().contains("place: ".toLowerCase())){
-                        System.out.println("Ho letto place");
-                        System.out.println(msg.charAt(8));
-                        System.out.println(msg.charAt(13));
-                    }
-                }
-                out3.println("round: <white>;");
-                while(!("end: ").equals(in3.readLine())){
+            while(!("endgame").equals(msg)){
+                if(msg.toLowerCase().contains("round: <black>;".toLowerCase())){
+                    while(!("end: ").equals(in3.readLine())){
+                        out3.println("round: <black>;");
                         if(msg.toLowerCase().contains("place: ".toLowerCase())){
                             System.out.println("Ho letto place");
                             System.out.println(msg.charAt(8));
                             System.out.println(msg.charAt(13));
+                            //out.println("");
+                            out3.println("round: <white>;");
                         }
+                    }
                 }
+                if(msg.toLowerCase().contains("round: <white>;".toLowerCase())){
+                    while(!("end: ").equals(in3.readLine())){
+                            out3.println("round: <white>;");
+                            if(msg.toLowerCase().contains("place: ".toLowerCase())){
+                                System.out.println("Ho letto place");
+                                System.out.println(msg.charAt(8));
+                                System.out.println(msg.charAt(13));
+                                //out.println("");
+                                out3.println("round: <black>;");
+                            }
+                    }
+                }
+            }
         } catch (IOException ex) {
             Logger.getLogger(connect.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    public void Update(){
+        
     }
 }

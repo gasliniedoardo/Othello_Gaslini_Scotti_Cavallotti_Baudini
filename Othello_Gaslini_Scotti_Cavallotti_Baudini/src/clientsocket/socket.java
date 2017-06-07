@@ -65,15 +65,12 @@ public class socket extends Thread{
                             turno=black;
                         }
                     }
-                    /*if(turno==black){
-                        out.println("round: <"+turno+">;");
-                    }*/
-                    do{
-                        String incorso = null;
-                       /* while(!("round: <"+turno+">;").equals(incorso)){
+                   // do{
+                        /*String incorso = null;
+                        while(!("round: <"+turno+">;").equals(incorso)){
                             incorso=in.readLine();
-                        }*/
-                        out.println("round: <"+turno+">;");
+                        }
+                        out.println("round: <"+turno+">;");*/
                         b.Mosse(turno);
                         b.MostraMosse();
                         v = new view(b.CampoDiGioco, b.Mosse);
@@ -101,7 +98,7 @@ public class socket extends Thread{
                         frame.validate();
                         frame.repaint();
                         out.println("end: ");
-                    }while(Ctrl.FineGioco()==true);
+                    //}while(Ctrl.FineGioco()==true);
                     out.println("endgame");
                     //in.close();
 		}catch(Exception e) { 
