@@ -55,7 +55,6 @@ public class GraficaOthello extends JPanel {
                    gridPanel.setBorder((Border) new CompoundBorder(new LineBorder(Color.black, 2), new EmptyBorder(2, 2, 2, 2)));
                    C[row][col]=new ColorGridCell(this,row, col,Ex,turno);
                    gridPanel.add(C[row][col]);
-                   //////////////////////////////////////////////////////////////////////////////////
             }
         }
         createAndShowGui(this);
