@@ -111,8 +111,8 @@ class ColorGridCell extends JPanel {
     protected Casella [][]CampoDiGioco;
     protected boolean [][]Mosse;
     Color giocatore;
-    BufferedImage PictureBlack = ImageIO.read(new File("/immagini/black.png"));
-    BufferedImage PictureWhite = ImageIO.read(new File("/immagini/white.png"));
+    BufferedImage PictureBlack = ImageIO.read(new File("black.png"));
+    BufferedImage PictureWhite = ImageIO.read(new File("white.png"));
     //BufferedImage PictureMossa = ImageIO.read(new File("mossa.png"));
     Image pblack = PictureBlack.getScaledInstance(86, 86,  java.awt.Image.SCALE_SMOOTH);
     Image pwhite = PictureWhite.getScaledInstance(86, 86,  java.awt.Image.SCALE_SMOOTH);
