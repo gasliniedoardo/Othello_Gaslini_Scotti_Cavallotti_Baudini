@@ -43,7 +43,7 @@ public class connect extends Thread{
                     System.out.println("E' stato letto connection;");
                     out1.println("start: " + "default " + socket.a);
                     Thread.sleep(2000);
-                    Gioco();
+                    //Gioco();
                 }
             }catch(Exception e1){
                 System.out.println(e1.getMessage());
@@ -56,7 +56,7 @@ public class connect extends Thread{
                     if (in2.readLine().equalsIgnoreCase("connection;")) {
                         System.out.println("è stato letto connection;");
                         out2.println("start: " + "default " + socket.a);
-                        Gioco();
+                        //Gioco();
                     }
                 }catch(Exception e1){
                     System.out.println(e1.getMessage());

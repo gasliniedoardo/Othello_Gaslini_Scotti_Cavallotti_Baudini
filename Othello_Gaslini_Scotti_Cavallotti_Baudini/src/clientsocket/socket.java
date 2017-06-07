@@ -65,14 +65,14 @@ public class socket extends Thread{
                             turno=black;
                         }
                     }
-                    if(turno==black){
+                    /*if(turno==black){
                         out.println("round: <"+turno+">;");
-                    }
+                    }*/
                     do{
                         String incorso = null;
-                        while(!("round: <"+turno+">;").equals(incorso)){
+                       /* while(!("round: <"+turno+">;").equals(incorso)){
                             incorso=in.readLine();
-                        }
+                        }*/
                         out.println("round: <"+turno+">;");
                         b.Mosse(turno);
                         b.MostraMosse();

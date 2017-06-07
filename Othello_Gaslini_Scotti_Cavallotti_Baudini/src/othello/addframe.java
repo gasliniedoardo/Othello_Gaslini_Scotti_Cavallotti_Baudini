@@ -152,11 +152,11 @@ public class addframe extends javax.swing.JFrame {
         );
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/white.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/white.png"))); // NOI18N
         jLabel3.setText("2");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/black.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/black.png"))); // NOI18N
         jLabel4.setText("2");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
